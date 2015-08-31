@@ -9,6 +9,9 @@ CFLAGS+=-Wwrite-strings
 CFLAGS+=-Wpointer-arith
 CFLAGS+=-Wfloat-equal
 CFLAGS+=-Wcast-align
+CFLAGS+=-std=gnu99
+CFLAGS+=-fgnu89-inline
+
 ifeq (yes, $(DEBUG))
   CFLAGS+=-g
 else
