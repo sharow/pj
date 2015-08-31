@@ -41,16 +41,16 @@ OBJECTS=$(subst .c,.o, $(SOURCES))
 all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
-    $(CC) $(LDFLAGS) $(OBJECTS) -o $@ $(LIBS)
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $@ $(LIBS)
 
 clean:
-    rm -f *~
-    rm -f $(OBJECTS) $(TARGET)
+	rm -f *~
+	rm -f $(OBJECTS) $(TARGET)
 
 .c.o:
-    $(CC) $(CFLAGS) $(INCLUDE) -c $<
+	$(CC) $(CFLAGS) $(INCLUDE) -c $<
 
 depend:
-    $(CC) -MM -w $(INCLUDE) $(SOURCES) > depend.inc
+	$(CC) -MM -w $(INCLUDE) $(SOURCES) > depend.inc
 
 include depend.inc
