@@ -15,3 +15,4 @@ $ make
 ```
 $ ./pj ./shaders/tunnel.glsl
 ```
+recommend tmux or gnu-screen.
