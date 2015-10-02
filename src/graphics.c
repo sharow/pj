@@ -254,8 +254,8 @@ static int RenderLayer_AllocateOffscreen(RenderLayer *layer,
                      format,
                      type,
                      NULL);
-        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, interpolation);
-        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, interpolation);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, interpolation);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, interpolation);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, wrap);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, wrap);
         glBindTexture(GL_TEXTURE_2D, 0);
@@ -683,8 +683,8 @@ int Graphics_AllocateOffscreen(Graphics *g)
                      format,
                      type,
                      NULL);
-        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
         glBindTexture(GL_TEXTURE_2D, 0);
